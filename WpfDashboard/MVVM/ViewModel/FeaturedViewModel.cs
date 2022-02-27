@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WpfDashboard.MVVM.ViewModel
 {
-    class DiscoveryViewModel
+    class FeaturedViewModel
     {
     }
 }

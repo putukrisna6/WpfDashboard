@@ -13,9 +13,13 @@ namespace WpfDashboard.MVVM.ViewModel
 
         public RelayCommand DiscoveryViewCommand { get; set; }
 
+        public RelayCommand FeaturedViewCommand { get; set; }
+
         public HomeViewModel HomeVm { get; set; }
 
         public DiscoveryViewModel DiscoveryVm { get; set; }
+
+        public FeaturedViewModel FeaturedVm { get; set; }
 
         private object _currentView;
 
@@ -33,6 +37,7 @@ namespace WpfDashboard.MVVM.ViewModel
         {
             HomeVm = new HomeViewModel();
             DiscoveryVm = new DiscoveryViewModel();
+            FeaturedVm = new FeaturedViewModel();
 
             CurrentView = HomeVm;
 
@@ -44,6 +49,11 @@ namespace WpfDashboard.MVVM.ViewModel
             DiscoveryViewCommand = new RelayCommand(o =>
             {
                 CurrentView = DiscoveryVm;
+            });
+
+            FeaturedViewCommand = new RelayCommand(o => 
+            { 
+                CurrentView = FeaturedVm; 
             });
         }
     }
